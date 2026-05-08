@@ -1,0 +1,36 @@
+<form
+  class="search-bar"
+  role="search"
+  aria-label="Search GitHub users by username"
+>
+  <fieldset class="search-bar__fieldset">
+    <legend class="search-bar__legend">GitHub username search</legend>
+
+    <div class="search-bar__body">
+      <label class="search-bar__label" for="search-query">Username</label>
+
+      <div class="search-bar__controls">
+        <input
+          class="search-bar__input"
+          id="search-query"
+          type="search"
+          name="q"
+          maxlength="39"
+          placeholder="octocat"
+          autocomplete="username"
+          enterkeyhint="search"
+          inputmode="search"
+          aria-describedby="search-hint"
+        />
+
+        <button class="search-bar__submit" type="submit">
+          Search
+        </button>
+      </div>
+
+      <p class="search-bar__hint" id="search-hint">
+        Enter a GitHub username and press Enter or use the search button.
+      </p>
+    </div>
+  </fieldset>
+</form>
