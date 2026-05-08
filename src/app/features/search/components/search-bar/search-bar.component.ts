@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-search-bar',
   standalone: true,
   imports: [],
-  templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.css'
+  templateUrl: './search-bar.component.html'
 })
 export class SearchBarComponent {
 

@@ -1,36 +1,65 @@
-<form
-  class="search-bar"
-  role="search"
-  aria-label="Search GitHub users by username"
->
-  <fieldset class="search-bar__fieldset">
-    <legend class="search-bar__legend">GitHub username search</legend>
+<form class="w-full bg-[#1c1c1c] shadow-sm" role="search" aria-labelledby="search-title">
+  <section
+    class="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 md:px-8 lg:px-12 lg:py-10"
+    aria-label="Search controls"
+  >
+    <header class="mb-5 flex items-center gap-2 sm:mb-6 sm:gap-3">
+      <svg
+        class="h-7 w-7 shrink-0 text-white sm:h-8 sm:w-8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.111.825-.262.825-.585 0-.288-.012-1.243-.018-2.25-3.338.723-4.042-1.416-4.042-1.416-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.084-.729.084-.729 1.203.084 1.836 1.236 1.836 1.236 1.068 1.83 2.799 1.302 3.48.996.108-.774.42-1.302.762-1.602-2.664-.303-5.466-1.332-5.466-5.93 0-1.311.468-2.381 1.236-3.221-.123-.303-.54-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.005.404 2.291-1.552 3.297-1.23 3.297-1.23.657 1.653.24 2.873.118 3.176.77.84 1.233 1.91 1.233 3.221 0 4.609-2.807 5.624-5.479 5.921.432.372.816 1.102.816 2.222v3.293c0 .318.219.702.825.585C20.565 21.795 24 17.31 24 12 24 5.37 18.63 0 12 0Z"
+        />
+      </svg>
+     
+      <h2 id="search-title" class="text-lg font-bold text-white sm:text-xl">
+        
+        GitHub Search
+      </h2>
+    </header>
 
-    <div class="search-bar__body">
-      <label class="search-bar__label" for="search-query">Username</label>
+    <fieldset class="m-0 min-w-0 border-0 p-0">
+      <legend class="sr-only">Search by GitHub username</legend>
 
-      <div class="search-bar__controls">
+      <label class="sr-only" for="search-query">Username</label>
+
+      <div class="relative w-full min-w-0">
+        <span
+          class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 sm:left-4"
+          aria-hidden="true"
+        >
+          <svg
+            class="h-5 w-5 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </span>
+
         <input
-          class="search-bar__input"
           id="search-query"
           type="search"
           name="q"
           maxlength="39"
-          placeholder="octocat"
+          placeholder="torvalds"
           autocomplete="username"
           enterkeyhint="search"
           inputmode="search"
-          aria-describedby="search-hint"
+          class="w-full min-w-0 appearance-none rounded-full border border-gray-700 bg-transparent py-2.5 pl-11 pr-3 text-[16px] text-white placeholder:text-gray-500 focus:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500/50 sm:py-3 sm:pl-12 sm:pr-4"
         />
-
-        <button class="search-bar__submit" type="submit">
-          Search
-        </button>
       </div>
 
-      <p class="search-bar__hint" id="search-hint">
-        Enter a GitHub username and press Enter or use the search button.
-      </p>
-    </div>
-  </fieldset>
+      <button type="submit" class="sr-only">Search</button>
+    </fieldset>
+  </section>
 </form>
