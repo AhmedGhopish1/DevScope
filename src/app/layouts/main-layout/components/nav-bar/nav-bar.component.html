@@ -1,1 +1,73 @@
-<p>nav-bar works!</p>
+<!-- Top Navigation Bar -->
+<nav class="border-b border-white/10 bg-black px-6 py-4 shadow-sm" role="navigation" aria-label="Main navigation bar">
+  
+  <!-- Nav Container -->
+  <div class="mx-auto max-w-7xl">
+    
+    <!-- Nav Header Section -->
+    <div class="flex items-center justify-between">
+      
+      <!-- Left: Title & Logo -->
+      <header class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5">
+          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.111.825-.262.825-.585 0-.288-.012-1.243-.018-2.25-3.338.723-4.042-1.416-4.042-1.416-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.084-.729.084-.729 1.203.084 1.836 1.236 1.836 1.236 1.068 1.83 2.799 1.302 3.48.996.108-.774.42-1.302.762-1.602-2.664-.303-5.466-1.332-5.466-5.93 0-1.311.468-2.381 1.236-3.221-.123-.303-.54-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.005.404 2.291-1.552 3.297-1.23 3.297-1.23.657 1.653.24 2.873.118 3.176.77.84 1.233 1.91 1.233 3.221 0 4.609-2.807 5.624-5.479 5.921.432.372.816 1.102.816 2.222v3.293c0 .318.219.702.825.585C20.565 21.795 24 17.31 24 12 24 5.37 18.63 0 12 0Z"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-white">DevScope</h1>
+          <p class="text-xs text-white/50">GitHub Developer Dashboard</p>
+        </div>
+      </header>
+
+      <!-- Center: Search Bar (Optional - can be moved to search-bar component) -->
+      <div class="hidden flex-1 mx-8 max-w-md md:block">
+        <div class="relative">
+          <input
+            type="search"
+            placeholder="Search developers..."
+            class="w-full rounded-lg bg-white/5 px-4 py-2 pl-10 text-sm text-white placeholder-white/40 transition-colors hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+            aria-label="Search GitHub developers"
+          />
+          <svg class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Right: User Actions -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Theme Toggle Button -->
+        <button 
+          type="button"
+          class="rounded-lg p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
+          aria-label="Toggle dark mode"
+          title="Dark mode"
+        >
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.64 15.95c-.18-.18-.46-.29-.74-.29h-.04a8.05 8.05 0 0 1-5.32-2.12 8.1 8.1 0 0 1-2.12-5.32v-.04c0-.28-.11-.56-.29-.74l-1.1-1.1a1.02 1.02 0 0 0-1.44 0l-7.55 7.55a1.02 1.02 0 0 0 0 1.44l1.1 1.1c.18.18.46.29.74.29h.04a8.05 8.05 0 0 1 5.32 2.12 8.1 8.1 0 0 1 2.12 5.32v.04c0 .28.11.56.29.74l1.1 1.1a1.02 1.02 0 0 0 1.44 0l7.55-7.55a1.02 1.02 0 0 0 0-1.44l-1.1-1.1z"/>
+          </svg>
+        </button>
+
+        <!-- User Profile Dropdown (Placeholder) -->
+        <button
+          type="button"
+          class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
+          aria-label="User menu"
+          aria-haspopup="true"
+        >
+          <div class="h-7 w-7 rounded-full bg-gradient-to-br from-blue-500 to-purple-600" aria-hidden="true"></div>
+          <span class="hidden sm:inline text-xs font-medium">Profile</span>
+          <svg class="h-4 w-4 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
